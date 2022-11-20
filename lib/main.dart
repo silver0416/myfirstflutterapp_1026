@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -14,8 +11,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     var textEditController = TextEditingController();
-
-
     var column = Column(
       children: [
         TextField(
@@ -31,16 +26,47 @@ class _MyAppState extends State<MyApp> {
         ),
       ],
     );
-
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Button'),
-        ),
-        body: Center(
-          child: column,
-        ),
-      ),
-    );
+    return column;
   }
 }
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Flutter button'),
+      ),
+      body: const MyApp(),
+    ),
+  ));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
